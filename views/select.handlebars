@@ -1,0 +1,36 @@
+<div class="col-8">
+    <table class="table table-dark table-borderless">
+    <tr>
+        <th>Action</th>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+         {{#data}}
+     <tr>
+         <td>
+             <a class="deletar" href="delete/{{id}}">Delete</a>
+             <a href="update/{{id}}">Alter</a>
+        </td>
+         <td>{{id}}</td>
+         <td>{{name}}</td>
+         <td>{{age}}</td>
+    </tr>
+        {{/data}}
+</table>
+</div>
+<script>
+    ((win, doc) => {
+    if (doc.querySelectorAll('.deletar')) {
+        for (let i = 0; i < doc.querySelectorAll('.deletar').length; i++) {
+            doc.querySelectorAll('.deletar')[i].addEventListener('click', (event) => {
+                if (confirm('Deseja mesmo apagar este dado?')) {
+                    return true
+                } else {
+                    event.preventDefault()
+                }
+            })
+        }
+    }
+})(window, document)
+</script>
