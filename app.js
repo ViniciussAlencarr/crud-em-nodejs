@@ -4,6 +4,7 @@ const mysql = require('mysql2')
 const morgan = require('morgan')
 const handleBars = require('express-handlebars')
 const urlEncondeParser = bodyParser.urlencoded({ extended: false })
+const multer = require('multer')
 
 const sql = mysql.createConnection({
     host: 'localhost',
@@ -18,7 +19,10 @@ const app = express()
 
 app.use(morgan('dev'))
 app.engine('handlebars', handleBars({ defaultLayout: `main`}))
+app.set('view engine', 'ejs')
 app.set('view engine', 'handlebars')
+
+const upload = multer({dest: 'uploads/'})
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -28,8 +32,8 @@ app.get('/inserir', (req, res) => {
     res.render('inserir')
 })
 
-app.post('/controllerForm', urlEncondeParser, (req, res) => {
-    sql.query('insert into user values (?,?,?);',[req.body.id, req.body.name, req.body.age])
+app.post('/controllerForm', urlEncondeParser, upload.single('imagem_produto'), (req, res) => {
+    sql.query('insert into user values (?,?,?,?);',[req.body.id, req.body.name, req.body.age, req.body.imagem_produto])
     res.render('controllerForm', {nome:req.body.name})
 })
 
