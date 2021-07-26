@@ -9,7 +9,7 @@ const sql = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: '311020'
+    password: '311020vra'
 })
 
 sql.query('use nodejs')
@@ -19,8 +19,6 @@ const app = express()
 app.use(morgan('dev'))
 app.engine('handlebars', handleBars({ defaultLayout: `main`}))
 app.set('view engine', 'handlebars')
-/* app.use('/css', express.static('css'))
-app.use('/javascript', express.static('js')) */
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -51,15 +49,6 @@ app.get('/delete/:id', (req, res) => {
     sql.query('delete from user where id=?', [req.params.id])
     res.render('delete')
 })
-
-/* app.get('/style', (req, res) => {
-    res.sendFile(__dirname+'style.css')
-})
-
-app.get('/javascript', (req, res) => {
-    res.sendFile(__dirname+'javascript.js')
-})
- */
 
 app.listen(3000, () => {
     console.log('Server is running...')
