@@ -19,6 +19,7 @@ const app = express()
 
 app.use(morgan('dev'))
 app.engine('handlebars', handleBars({ defaultLayout: `main`}))
+app.use('/img', express.static('views/img/'))
 app.set('view engine', 'ejs')
 app.set('view engine', 'handlebars')
 
@@ -32,8 +33,8 @@ app.get('/inserir', (req, res) => {
     res.render('inserir')
 })
 
-app.post('/controllerForm', urlEncondeParser, upload.single('imagem_produto'), (req, res) => {
-    sql.query('insert into user values (?,?,?,?);',[req.body.id, req.body.name, req.body.age, req.body.imagem_produto])
+app.post('/controllerForm', urlEncondeParser, (req, res) => {
+    sql.query('insert into user values (?,?,?);',[req.body.id, req.body.name, req.body.age])
     res.render('controllerForm', {nome:req.body.name})
 })
 
