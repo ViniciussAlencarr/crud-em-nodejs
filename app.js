@@ -22,6 +22,8 @@ app.engine('handlebars', handleBars({ defaultLayout: `main`}))
 app.use('/img', express.static('views/img/'))
 app.set('view engine', 'ejs')
 app.set('view engine', 'handlebars')
+app.use('/style', express.static('views/'))
+
 
 const upload = multer({dest: 'uploads/'})
 
