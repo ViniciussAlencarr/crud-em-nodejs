@@ -125,6 +125,21 @@ p,
     color: rgb(0, 0, 0);
     margin-bottom: 25px;     
 }
+.btnBuy {
+    display: block;
+    height: 35px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    opacity: 1;
+    transition: all 300ms;
+    font-family: NikeTG,HelveticaNeue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    background-color: #111;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
 .placeBox {
     position: relative;
     max-width: 300px;
@@ -136,11 +151,59 @@ p,
     width: 100%;
     height: 80%;
 }
+.product-hover {
+    background: transparent; 
+    height: 20%;
+    width: 300px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    transition: 300ms;
+    margin-top: -30%;
+    /* opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    transition: opacity 300ms;
+        transition-property: opacity;
+        transition-duration: 300ms;
+        transition-timing-function: ease;
+        transition-delay: 0s; */
+}
+.product-hover:hover {
+    opacity: 1;
+    transition: opacity 300ms;
+    transition-property: opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    transition-delay: 0s; 
+    background-color: rgba(255,255,255,0.5);
+} 
+
+/* opacity: 0;
+position: absolute;
+bottom: 0;
+left: 0;
+display: block;
+width: 100%;
+background-color: rgba(255,255,255,0.5);
+transition: opacity 300ms; */
+
 .placeBox .imgBx img {
     /* object-fit: cover;
     width: 100%;
     height: 100%; */
+    transition: 0.5s;
 }
+    
+.placeBox .imgBx img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
 .content {
     position: relative;
     top: 0;
