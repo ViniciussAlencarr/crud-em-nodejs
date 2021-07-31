@@ -126,20 +126,26 @@ p,
     margin-bottom: 25px;     
 }
 .btnBuy {
-    display: block;
-    height: 35px;
+    width: 100%;
+    border: none;
+    background: #111;
     border-radius: 3px;
+    height: 35px;
     text-align: center;
     line-height: 35px;
-    opacity: 1;
     transition: all 300ms;
     font-family: NikeTG,HelveticaNeue,Helvetica,Arial,sans-serif;
     text-transform: uppercase;
-    background-color: #111;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+    margin-top: 32%;
 }
+.btnBuy:hover {
+    background: black;
+    transition: 0.2s;
+}
+
 .placeBox {
     position: relative;
     max-width: 300px;
@@ -150,16 +156,23 @@ p,
 .placeBox .imgBx {
     width: 100%;
     height: 80%;
+    background: #f0f0f0;
+    z-index: 100;
+    height: 76%;
+    margin-top: 50%;
+}
+.content-imgs {
+    margin-left: 2%;
 }
 .product-hover {
     background: transparent; 
-    height: 20%;
+    height: auto;
     width: 300px;
     text-align: center;
     opacity: 0;
     position: absolute;
     transition: 300ms;
-    margin-top: -30%;
+    margin-top: -35%;
     /* opacity: 0;
     position: absolute;
     bottom: 0;
@@ -216,7 +229,7 @@ transition: opacity 300ms; */
     flex-direction: column;
 }
 .content .product {
-    margin-top: -10px;
+    margin-top: 10px;
 }
 .content .prices {
     flex-direction: row;
