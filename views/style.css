@@ -149,30 +149,40 @@ p,
 .placeBox {
     position: relative;
     max-width: 300px;
-    height: 400px;
+    height: auto;
     margin: 0 auto;
     margin-top: 30px;
 }
 .placeBox .imgBx {
     width: 100%;
-    height: 80%;
+    height: 25%;
     background: #f0f0f0;
     z-index: 100;
     height: 76%;
-    margin-top: 50%;
+    margin-top: 30%;
 }
 .content-imgs {
-    margin-left: 2%;
+    margin-left: 1%;
+    width: 30%;
 }
-.product-hover {
+.nm-filter-expanded .nm-sidebar-left {
+    display: block;
+    margin-right: 50px;
+    -webkit-box-flex: 0;
+    flex: 0 0 240px;
+    max-width: 240px;
+}
+
+.product-hover:last-child {
     background: transparent; 
     height: auto;
-    width: 300px;
+    width: -moz-available;
     text-align: center;
     opacity: 0;
-    position: absolute;
+    z-index: 100;
+    position: sticky;
     transition: 300ms;
-    margin-top: -35%;
+    margin-top: -32%;
     /* opacity: 0;
     position: absolute;
     bottom: 0;
@@ -211,11 +221,16 @@ transition: opacity 300ms; */
     height: 100%; */
     transition: 0.5s;
 }
-    
-.placeBox .imgBx img:hover {
+
+.img-fluid {
+    width: -moz-available;
+    margin-top: inherit;
+}
+
+/* .placeBox .imgBx img:hover {
     opacity: 0.5;
     transition: 0.5s;
-}
+} */
 
 .content {
     position: relative;
