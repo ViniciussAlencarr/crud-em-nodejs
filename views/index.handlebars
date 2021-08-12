@@ -6,7 +6,7 @@
             <div class="container">
             <a class="navbar-brand" href="#">Vinicius Alencar</a>
             
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
@@ -37,14 +37,66 @@
           </nav>
     </header>
     <div style="display: inline-flex;">
-        <div style="width: -moz-available;">
-            <h3>Filtros</h3>
+        <div class="" style="width: 50%; margin-top: 7%; margin-left: 1%;">
+            <h3>FILTROS</h3>
+            <hr>
             <div style="text-align: right;">
-            <a class="fa fa-plus" href="#"></a>
-            {{!-- <a class="fa fa-minus" href="#"></a> --}}
-
+                <label class="label-content" for="Cor">
+                    Cor
+                </label>
+                <a onclick="cores()" style="margin-right: 5%; text-decoration: none; color: black;" class="fa fa-plus" href="#asda"></a>
+                {{!-- <a class="fa fa-minus" href="#"></a> --}}
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, commodi. Aliquid similique nesciunt, est itaque placeat provident quam tempora esse minima vitae, reiciendis laboriosam officiis quaerat? Iusto officiis possimus sunt.</p>
+            <div class="cores">
+                <p style="border-radius: 100%; background-color: green; width: 34px; height: 34px;"></p>
+                <p style="border-radius: 100%; background-color: red; width: 34px; height: 34px;"></p>
+                <p style="border-radius: 100%; background-color: grey; width: 34px; height: 34px;"></p>
+                <p style="border-radius: 100%; background-color: yellow; width: 34px; height: 34px;"></p>
+                <p style="border-radius: 100%; background-color: black; width: 34px; height: 34px;"></p>
+                <p style="border-radius: 100%; background-color: blue; width: 34px; height: 34px;"></p>
+            </div>
+            <hr>
+            <div style="text-align: right;">
+                <label class="label-content" for="Tamanho">
+                    Tamanho
+                </label>
+                <a onclick="tamanhos()" style="margin-right: 5%; text-decoration: none; color: black;" class="fa fa-plus" href="#asdasd"></a>
+            {{!-- <a class="fa fa-minus" href="#"></a> --}}
+            </div>
+            <div class="tamanhos">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, commodi. Aliquid similique nesciunt, est itaque placeat provident quam tempora esse minima vitae, reiciendis laboriosam officiis quaerat? Iusto officiis possimus sunt.</p>
+            </div>
+            <hr>
+            <div style="text-align: right;">
+                <label class="label-content" for="Preço (R$)">Preço (R$)</label>
+                <a onclick="precos()" style="margin-right: 5%; text-decoration: none; color: black;" class="fa fa-plus" href="#preco"></a>
+                {{!-- <a class="fa fa-minus" href="#"></a> --}}
+            </div>
+            <div class="precos">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, commodi. Aliquid similique nesciunt, est itaque placeat provident quam tempora esse minima vitae, reiciendis laboriosam officiis quaerat? Iusto officiis possimus sunt.</p>
+            </div>
+            <hr>
+            <div style="text-align: right;">
+                <label class="label-content" for="Categoria do produto">
+                    Categoria do produto
+                </label>
+                <a onclick="categorias()" style="margin-right: 5%; text-decoration: none; color: black;" class="fa fa-plus" href="#categoria"></a>
+            {{!-- <a class="fa fa-minus" href="#"></a> --}}
+            </div>
+            <div class="categorias">
+                <p>Lorem ipsum dolor, sit amet consectur adipisicing elit. Veritatis, commodi. Aliquid similique nesciunt, est itaque placeat provident quam tempora esse minima vitae, reiciendis laboriosam officiis quaerat? Iusto officiis possimus sunt.</p>
+            </div>
+            <hr>
+            <div style="text-align: right;">
+                <label class="label-content" for="Tipo de produto">
+                    Tipo de produto
+                </label>
+                <a onclick="tipos()" style="margin-right: 5%; text-decoration: none; color: black;" class="fa fa-plus" href="#"></a>
+            {{!-- <a class="fa fa-minus" href="#"></a> --}}
+            </div>
+            <div class="tipos">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, commodi. Aliquid similique nesciunt, est itaque placeat provident quam tempora esse minima vitae, reiciendis laboriosam officiis quaerat? Iusto officiis possimus sunt.</p>
+            </div>
             <hr>
         </div>
         <div style="justify-content: center;" class="row">
@@ -58,7 +110,7 @@
                           </div>
                            <div class="content">
                             <div class="product">
-                                <p>Tênis Nike Air Jordan 1 Retro High</p>                              
+                                <p>Têsnis Nike Air Jordan 4 - Ano 1989</p>                              
                             </div>
                             <div>
                                 <p style="color: #8d8d8d;">Casual</p>
@@ -314,6 +366,26 @@
     </div>
          
               <script>
+                  function cores() {
+                      const icon = document.querySelector('.cores');
+                      icon.classList.toggle('active');
+                  }
+                  function tamanhos() {
+                      const icon = document.querySelector('.tamanhos');
+                      icon.classList.toggle('active');
+                  }
+                  function precos() {
+                      const icon = document.querySelector('.precos');
+                      icon.classList.toggle('active');
+                  }
+                  function categorias() {
+                      const icon = document.querySelector('.categorias');
+                      icon.classList.toggle('active');
+                  }
+                  function tipos() {
+                      const icon = document.querySelector('.tipos');
+                      icon.classList.toggle('active');
+                  }
                   function toggleMenu() {
                       const menuToggle = document.querySelector('.product-hover');
                       menuToggle.classList.toggle('active');

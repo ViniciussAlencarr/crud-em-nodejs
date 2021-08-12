@@ -52,7 +52,7 @@ app.get('/select/:id?', (req, res) => {
     }
 })  
 
-app.get('/delete/:id', (req, res) => {
+app.get('/delete/:id    ', (req, res) => {
     sql.query('delete from user where id=?', [req.params.id])
     res.render('delete')
 })

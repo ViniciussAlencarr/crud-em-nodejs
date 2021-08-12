@@ -2,14 +2,28 @@
 * {
     outline: none !important;
     scroll-behavior: smooth;
+    font-family: NikeTG,HelveticaNeue,Helvetica,Arial,sans-serif;
+
 }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: NikeTG,HelveticaNeue,Helvetica,Arial,sans-serif;
 }
 
 header {
     position: relative;
     z-index: 1000000;
+}
+
+.label-content {
+    position: relative;
+    cursor: pointer;
+    padding: 10px inherit;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: normal;
+    font-family: NikeTG,HelveticaNeue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color: #111;
 }
 p,
 .sec2 p {
@@ -192,7 +206,44 @@ p,
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+/* 
+* FILTROS DOS PRODUTOS
+*/
+.cores {
+    display: none;
+}
 
+.cores.active {
+    display: block;
+}
+.tamanhos {
+    display: none;
+}
+
+.tamanhos.active {
+    display: block;
+}
+.precos {
+    display: none;
+}
+
+.precos.active {
+    display: block;
+}
+.categorias {
+    display: none;
+}
+
+.categorias.active {
+    display: block;
+}
+.tipos {
+    display: none;
+}
+
+.tipos.active {
+    display: block;
+}
 .product-hover:last-child {
     background: transparent; 
     height: auto;
