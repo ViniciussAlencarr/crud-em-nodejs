@@ -31,8 +31,11 @@ header {
 
 .cores-especificas {
     width: 32%;
+    margin-left: -17%;
 }
-
+.cores-container li span {
+    text-align: center;
+}
 .cores-especificas,
 .cores-container {
     list-style-type: none;
@@ -202,11 +205,52 @@ p,
 .neemu-filter input[type="checkbox"]:checked ~ label::after {
     content: url(img/plus-removebg-preview.png);
 }
+.checked-color-azul.active,
+.checked-color-branco.active,
+.checked-color-amarelo.active,
+.checked-color-cinza.active,
+.checked-color-dourado.active,
+.checked-color-bege.active,
+.checked-color-marrom.active,
+.checked-color-multicolor.active,
+.checked-color-laranja.active,
+.checked-color-rosa.active,
+.checked-color-roxo.active,
+.checked-color-preto.active,
+.checked-color-vermelho.active, 
+.checked-color-verde.active {
+    opacity: 1;
+}
 
+.checked-color-azul,
+.checked-color-amarelo,
+.checked-color-cinza,
+.checked-color-branco,
+.checked-color-dourado,
+.checked-color-bege,
+.checked-color-marrom,
+.checked-color-multicolor,
+.checked-color-laranja,
+.checked-color-rosa,
+.checked-color-roxo,
+.checked-color-preto,
+.checked-color-vermelho, 
+.checked-color-verde {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+}
+.cores-especificas li a {
+    text-decoration: none;
+}
+span {
+    margin-top: 100%;
+}
 .checked-color {
     background-size: 60%;
     display: block;
     padding: 0;
+    opacity: 1;
     margin: 0 auto;
     height: 28px;
     width: 28px;
@@ -238,7 +282,7 @@ p,
 }
 
 .cores.active {
-    display: block;
+    display: grid;
 }
 .tamanhos {
     display: none;
