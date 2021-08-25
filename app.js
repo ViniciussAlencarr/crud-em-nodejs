@@ -36,8 +36,8 @@ app.get('/inserir', (req, res) => {
 })
 
 app.post('/controllerForm', urlEncondeParser, (req, res) => {
-    sql.query('insert into user values (?,?,?);',[req.body.id, req.body.name, req.body.age])
-    res.render('controllerForm', {nome:req.body.name})
+    sql.query('insert into produto values (?,?,?,?,?,?,?);',[req.body.id, req.body.nome, req.body.valor, req.body.cor, req.body.tamanho, req.body.categoria, req.body.tipo])
+    res.render('controllerForm', {nome:req.body.nome})
 })
 
 app.get('/select/:id?', (req, res) => {
@@ -52,7 +52,7 @@ app.get('/select/:id?', (req, res) => {
     }
 })  
 
-app.get('/delete/:id    ', (req, res) => {
+app.get('/delete/:id', (req, res) => {
     sql.query('delete from user where id=?', [req.params.id])
     res.render('delete')
 })
